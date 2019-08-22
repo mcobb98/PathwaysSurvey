@@ -1,36 +1,127 @@
-<button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
-  {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
-</button>
-<mat-horizontal-stepper [linear]="isLinear" #stepper>
-  <mat-step [stepControl]="firstFormGroup">
-    <form [formGroup]="firstFormGroup">
-      <ng-template matStepLabel>Fill out your name</ng-template>
-      <mat-form-field>
-        <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
-      </mat-form-field>
-      <div>
-        <button mat-button matStepperNext>Next</button>
-      </div>
-    </form>
-  </mat-step>
-  <mat-step [stepControl]="secondFormGroup">
-    <form [formGroup]="secondFormGroup">
-      <ng-template matStepLabel>Fill out your address</ng-template>
-      <mat-form-field>
-        <input matInput placeholder="Address" formControlName="secondCtrl" required>
-      </mat-form-field>
-      <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext>Next</button>
-      </div>
-    </form>
-  </mat-step>
-  <mat-step>
-    <ng-template matStepLabel>Done</ng-template>
-    You are now done.
-    <div>
-      <button mat-button matStepperPrevious>Back</button>
-      <button mat-button (click)="stepper.reset()">Reset</button>
-    </div>
-  </mat-step>
-</mat-horizontal-stepper>
+<mat-card>
+  <mat-card-title>Cloud Pathways Survey</mat-card-title>
+  <mat-vertical-stepper [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Question 1</ng-template>
+        <p>Did the program match what you were told to expect? If no, what could have been better communicated?</p>
+        <mat-form-field>
+          <input matInput placeholder="" formControlName="firstCtrl" required width="50px">
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Question 2</ng-template>
+        <p>What were your development goals coming into this program?</p>
+        <mat-form-field>
+          <input matInput placeholder="" formControlName="secondCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="thirdFormGroup">
+      <form [formGroup]="thirdFormGroup">
+        <ng-template matStepLabel>Question 3</ng-template>
+        <p>What do you feel were the most productive parts of your experience with the program?</p>
+        <mat-form-field>
+          <input matInput placeholder="" formControlName="thirdCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="fourthFormGroup">
+      <form [formGroup]="fourthFormGroup">
+        <ng-template matStepLabel>Question 4</ng-template>
+        <p>What were some areas that could be improved on and how would you implement them differently?</p>
+        <mat-form-field>
+          <input matInput placeholder="" formControlName="fourthCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="fifthFormGroup">
+      <form [formGroup]="fifthFormGroup">
+        <ng-template matStepLabel>Question 5</ng-template>
+        <p>How has this program impacted your personal career goals?</p>
+        <mat-form-field>
+          <input matInput placeholder="" formControlName="fifthCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="sixthFormGroup">
+      <form [formGroup]="sixthFormGroup">
+        <ng-template matStepLabel>Question 6</ng-template>
+        <p>What would you desire for your next steps in your development with 1901?</p>
+        <mat-form-field>
+          <input matInput placeholder="" formControlName="sixthCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="seventhFormGroup">
+      <form [formGroup]="seventhFormGroup">
+        <ng-template matStepLabel>Question 7</ng-template>
+        <p>What are some things you have learned about cloud service and production that you didn’t know before?</p>
+        <mat-form-field>
+          <input matInput placeholder="" formControlName="seventhCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="eighthFormGroup">
+      <form [formGroup]="eighthFormGroup">
+        <ng-template matStepLabel>Question 8</ng-template>
+        <p>Are there any unanswered questions about 1901’s role in cloud service and production do you have? If yes, what are they?</p>
+        <mat-form-field>
+          <input matInput placeholder="" formControlName="eighthCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="ninthFormGroup">
+      <form [formGroup]="ninthFormGroup">
+        <ng-template matStepLabel>Question 9</ng-template>
+        <p>Do you feel like this program was adaptive to your educational needs? If no, what would have helped to provide a better learning environment?</p>
+        <mat-form-field>
+          <input matInput placeholder="" formControlName="ninthCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="thirdFormGroup">
+      <form [formGroup]="thirdFormGroup">
+        <ng-template matStepLabel>Question 10</ng-template>
+        <p>If you have additional comments not covered by other questions in this survey, please make them here.</p>
+        <mat-form-field>
+          <input matInput placeholder="" formControlName="tenthCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Submit</button>
+        </div>
+      </form>
+    </mat-step>
+  </mat-vertical-stepper>
+</mat-card>

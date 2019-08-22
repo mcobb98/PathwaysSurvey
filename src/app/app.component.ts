@@ -10,6 +10,14 @@ export class AppComponent {
   isLinear = false;
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
+  thirdFormGroup: FormGroup;
+  fourthFormGroup: FormGroup;
+  fifthFormGroup: FormGroup;
+  sixthFormGroup: FormGroup;
+  seventhFormGroup: FormGroup;
+  eighthFormGroup: FormGroup;
+  ninthFormGroup: FormGroup;
+  tenthFormGroup: FormGroup;
   
   constructor(private _formBuilder: FormBuilder) {}
 
@@ -19,6 +27,30 @@ export class AppComponent {
     });
     this.secondFormGroup = this._formBuilder.group({
       secondCtrl: ['', Validators.required]
+    });
+    this.thirdFormGroup = this._formBuilder.group({
+      thirdCtrl: ['', Validators.required]
+    });
+    this.fourthFormGroup = this._formBuilder.group({
+      fourthCtrl: ['', Validators.required]
+    });
+    this.fifthFormGroup = this._formBuilder.group({
+      fifthCtrl: ['', Validators.required]
+    });
+    this.sixthFormGroup = this._formBuilder.group({
+      sixthCtrl: ['', Validators.required]
+    });
+    this.seventhFormGroup = this._formBuilder.group({
+      seventhCtrl: ['', Validators.required]
+    });
+    this.eighthFormGroup = this._formBuilder.group({
+      eighthCtrl: ['', Validators.required]
+    });
+    this.ninthFormGroup = this._formBuilder.group({
+      ninthCtrl: ['', Validators.required]
+    });
+    this.tenthFormGroup = this._formBuilder.group({
+      tenthCtrl: ['', Validators.required]
     });
   }
 }
