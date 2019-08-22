@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { getRandomString } from '../../node_modules/@types/selenium-webdriver/safari';
+
 
 @Component({
   selector: 'app-root',
@@ -53,6 +56,24 @@ export class AppComponent {
       tenthCtrl: ['', Validators.required]
     });
   }
+
+  submitToAPI() {
+    var data = {
+      'SubmitID':Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15), 
+      'Question 1':this.firstFormGroup.value, 
+      'Question 2':this.secondFormGroup.value, 
+      'Question 3':this.thirdFormGroup.value,
+      'Question 4':this.fourthFormGroup.value,
+      'Question 5':this.fifthFormGroup.value,
+      'Question 6':this.sixthFormGroup.value,
+      'Question 7':this.seventhFormGroup.value,
+      'Question 8':this.eighthFormGroup.value,
+      'Question 9':this.ninthFormGroup.value,
+      'Question 10':this.tenthFormGroup.value
+    }
+    console.log(data);
+  }
+
 }
 
 
