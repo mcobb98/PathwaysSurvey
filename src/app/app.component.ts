@@ -54,7 +54,10 @@ export class AppComponent {
     });
     this.tenthFormGroup = this._formBuilder.group({
       tenthCtrl: ['', Validators.required]
+    });this.tenthFormGroup = this._formBuilder.group({
+      tenthCtrl: ['', Validators.required]
     });
+  
   }
 
   submitToAPI() {

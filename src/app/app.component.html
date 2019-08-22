@@ -109,16 +109,16 @@
         </div>
       </form>
     </mat-step>
-    <mat-step [stepControl]="thirdFormGroup">
-      <form [formGroup]="thirdFormGroup">
+    <mat-step [stepControl]="tenthFormGroup">
+      <form [formGroup]="tenthFormGroup">
         <ng-template matStepLabel>Question 10</ng-template>
         <p>If you have additional comments not covered by other questions in this survey, please make them here.</p>
         <mat-form-field>
-          <textarea matInput placeholder="" formControlName="tenthCtrl" required></textarea>
+          <textarea matInput placeholder="" formControlName="tenthCtrl"></textarea>
         </mat-form-field>
         <div>
           <button mat-button (click)="stepper.reset()">Reset</button>
-          <button mat-button (click)="stepper.submitToAPI()">Submit</button>
+          <button mat-button (click)="this.submitToAPI()">Submit</button>
         </div>
       </form>
     </mat-step>
