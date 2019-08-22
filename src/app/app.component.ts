@@ -54,8 +54,6 @@ export class AppComponent {
     });
     this.tenthFormGroup = this._formBuilder.group({
       tenthCtrl: ['', Validators.required]
-    });this.tenthFormGroup = this._formBuilder.group({
-      tenthCtrl: ['', Validators.required]
     });
   
   }
@@ -74,7 +72,8 @@ export class AppComponent {
       'Question 9':this.ninthFormGroup.value,
       'Question 10':this.tenthFormGroup.value
     }
-    console.log(data);
+    alert(data);
+    alert('Thank you for submitting!')
   }
 
 }
