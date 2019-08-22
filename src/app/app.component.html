@@ -6,7 +6,7 @@
         <ng-template matStepLabel>Question 1</ng-template>
         <p>Did the program match what you were told to expect? If no, what could have been better communicated?</p>
         <mat-form-field>
-          <input matInput placeholder="" formControlName="firstCtrl" required width="50px">
+          <textarea matInput placeholder="" formControlName="firstCtrl" required width="50px"></textarea>
         </mat-form-field>
         <div>
           <button mat-button matStepperNext>Next</button>
@@ -18,7 +18,7 @@
         <ng-template matStepLabel>Question 2</ng-template>
         <p>What were your development goals coming into this program?</p>
         <mat-form-field>
-          <input matInput placeholder="" formControlName="secondCtrl" required>
+          <textarea matInput placeholder="" formControlName="secondCtrl" required></textarea>
         </mat-form-field>
         <div>
           <button mat-button matStepperNext>Next</button>
@@ -30,7 +30,7 @@
         <ng-template matStepLabel>Question 3</ng-template>
         <p>What do you feel were the most productive parts of your experience with the program?</p>
         <mat-form-field>
-          <input matInput placeholder="" formControlName="thirdCtrl" required>
+          <textarea matInput placeholder="" formControlName="thirdCtrl" required></textarea>
         </mat-form-field>
         <div>
           <button mat-button matStepperNext>Next</button>
@@ -42,7 +42,7 @@
         <ng-template matStepLabel>Question 4</ng-template>
         <p>What were some areas that could be improved on and how would you implement them differently?</p>
         <mat-form-field>
-          <input matInput placeholder="" formControlName="fourthCtrl" required>
+          <textarea matInput placeholder="" formControlName="fourthCtrl" required></textarea>
         </mat-form-field>
         <div>
           <button mat-button matStepperNext>Next</button>
@@ -54,7 +54,7 @@
         <ng-template matStepLabel>Question 5</ng-template>
         <p>How has this program impacted your personal career goals?</p>
         <mat-form-field>
-          <input matInput placeholder="" formControlName="fifthCtrl" required>
+          <textarea matInput placeholder="" formControlName="fifthCtrl" required></textarea>
         </mat-form-field>
         <div>
           <button mat-button matStepperNext>Next</button>
@@ -66,7 +66,7 @@
         <ng-template matStepLabel>Question 6</ng-template>
         <p>What would you desire for your next steps in your development with 1901?</p>
         <mat-form-field>
-          <input matInput placeholder="" formControlName="sixthCtrl" required>
+          <textarea matInput placeholder="" formControlName="sixthCtrl" required></textarea>
         </mat-form-field>
         <div>
           <button mat-button matStepperNext>Next</button>
@@ -78,7 +78,7 @@
         <ng-template matStepLabel>Question 7</ng-template>
         <p>What are some things you have learned about cloud service and production that you didn’t know before?</p>
         <mat-form-field>
-          <input matInput placeholder="" formControlName="seventhCtrl" required>
+          <textarea matInput placeholder="" formControlName="seventhCtrl" required></textarea>
         </mat-form-field>
         <div>
           <button mat-button matStepperNext>Next</button>
@@ -90,7 +90,7 @@
         <ng-template matStepLabel>Question 8</ng-template>
         <p>Are there any unanswered questions about 1901’s role in cloud service and production do you have? If yes, what are they?</p>
         <mat-form-field>
-          <input matInput placeholder="" formControlName="eighthCtrl" required>
+          <textarea matInput placeholder="" formControlName="eighthCtrl" required></textarea>
         </mat-form-field>
         <div>
           <button mat-button matStepperNext>Next</button>
@@ -102,7 +102,7 @@
         <ng-template matStepLabel>Question 9</ng-template>
         <p>Do you feel like this program was adaptive to your educational needs? If no, what would have helped to provide a better learning environment?</p>
         <mat-form-field>
-          <input matInput placeholder="" formControlName="ninthCtrl" required>
+          <textarea matInput placeholder="" formControlName="ninthCtrl" required></textarea>
         </mat-form-field>
         <div>
           <button mat-button matStepperNext>Next</button>
@@ -114,11 +114,11 @@
         <ng-template matStepLabel>Question 10</ng-template>
         <p>If you have additional comments not covered by other questions in this survey, please make them here.</p>
         <mat-form-field>
-          <input matInput placeholder="" formControlName="tenthCtrl" required>
+          <textarea matInput placeholder="" formControlName="tenthCtrl" required></textarea>
         </mat-form-field>
         <div>
           <button mat-button (click)="stepper.reset()">Reset</button>
-          <button mat-button (click)="stepper.reset()">Submit</button>
+          <button mat-button (click)="stepper.submitToAPI()">Submit</button>
         </div>
       </form>
     </mat-step>
