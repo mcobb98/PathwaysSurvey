@@ -21,7 +21,6 @@
           <input matInput placeholder="" formControlName="secondCtrl" required>
         </mat-form-field>
         <div>
-          <button mat-button matStepperPrevious>Back</button>
           <button mat-button matStepperNext>Next</button>
         </div>
       </form>
@@ -118,8 +117,8 @@
           <input matInput placeholder="" formControlName="tenthCtrl" required>
         </mat-form-field>
         <div>
-          <button mat-button matStepperPrevious>Back</button>
-        <button mat-button (click)="stepper.reset()">Submit</button>
+          <button mat-button (click)="stepper.reset()">Reset</button>
+          <button mat-button (click)="stepper.reset()">Submit</button>
         </div>
       </form>
     </mat-step>
