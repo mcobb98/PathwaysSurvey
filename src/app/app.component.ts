@@ -91,7 +91,7 @@ export class AppComponent {
 
     xhr.send(data);
 
-    alert("Thank you! Your survey has been submitted")
+    alert("Thank you for completing the survey! Your results have been submitted")
   }
 
 }
