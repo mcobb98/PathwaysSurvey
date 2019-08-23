@@ -61,34 +61,34 @@ export class AppComponent {
   submitToAPI() {
     var surveydata = {
       "SubmitID":Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15), 
-      "Question 1":this.firstFormGroup.value, 
-      "Question 2":this.secondFormGroup.value, 
-      "Question 3":this.thirdFormGroup.value,
-      "Question 4":this.fourthFormGroup.value,
-      "Question 5":this.fifthFormGroup.value,
-      "Question 6":this.sixthFormGroup.value,
-      "Question 7":this.seventhFormGroup.value,
-      "Question 8":this.eighthFormGroup.value,
-      "Question 9":this.ninthFormGroup.value,
-      "Question 10":this.tenthFormGroup.value
+      "Question 1" : this.firstFormGroup.value["firstCtrl"], 
+      "Question 2" : this.secondFormGroup.value["secondCtrl"], 
+      "Question 3" : this.thirdFormGroup.value["thirdCtrl"],
+      "Question 4" : this.fourthFormGroup.value["fourthCtrl"],
+      "Question 5" : this.fifthFormGroup.value["fifthCtrl"],
+      "Question 6" : this.sixthFormGroup.value["sixthCtrl"],
+      "Question 7" : this.seventhFormGroup.value["seventhCtrl"],
+      "Question 8" : this.eighthFormGroup.value["eighthCtrl"],
+      "Question 9" : this.ninthFormGroup.value["ninthCtrl"],
+      "Question 10" : this.tenthFormGroup.value["tenthCtrl"]
     }
 
-  var data = JSON.stringify(surveydata);
-  var xhr = new XMLHttpRequest();
-  xhr.withCredentials = false;
+    var data = JSON.stringify(surveydata);
+    
+    var xhr = new XMLHttpRequest();
+    xhr.withCredentials = false;
 
-  xhr.addEventListener("readystatechange", function () {
-    if (this.readyState === 4) {
-      console.log(this.responseText);
-    }
-  });
+    xhr.addEventListener("readystatechange", function () {
+      if (this.readyState === 4) {
+        console.log(this.responseText);
+      }
+    });
 
-  xhr.open("POST", "https://hd1myifw5b.execute-api.us-east-1.amazonaws.com/default");
-  xhr.setRequestHeader("Content-Type", "application/json");
-  xhr.setRequestHeader("cache-control", "no-cache");
-  xhr.setRequestHeader("Postman-Token", "8352ce7f-8c8f-424e-a15a-3b55230bc56a");
+    xhr.open("POST", "https://hd1myifw5b.execute-api.us-east-1.amazonaws.com/default/surveydata");
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.setRequestHeader("Accept", "*/*");
 
-  xhr.send(data);
+    xhr.send(data);
   }
 
 }
