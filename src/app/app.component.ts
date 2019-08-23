@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { getRandomString } from '../../node_modules/@types/selenium-webdriver/safari';
+import { resetFakeAsyncZone } from '../../node_modules/@angular/core/testing';
 
 
 @Component({
@@ -89,6 +90,8 @@ export class AppComponent {
     xhr.setRequestHeader("Accept", "*/*");
 
     xhr.send(data);
+
+    alert("Thank you! Your survey has been submitted")
   }
 
 }
